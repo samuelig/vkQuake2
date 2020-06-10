@@ -26,6 +26,9 @@ ifeq ($(KERNEL_ARCH),x86_64)
 else ifeq ($(KERNEL_ARCH),ppc64le)
   ARCH=ppc64le
   RPMARCH=ppc64le
+else ifeq ($(KERNEL_ARCH),aarch64)
+  ARCH=aarch64
+  RPMARCH=aarch64
 else ifneq (,$(findstring alpha,$(KERNEL_ARCH)))
   ARCH=axp
   RPMARCH=alpha
